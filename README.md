@@ -1,1 +1,1 @@
-# Dynamical_graphs
+# GrEVE: Graph Evolution Visualization and Evaluation
