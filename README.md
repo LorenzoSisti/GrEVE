@@ -1,1 +1,1 @@
-# GrEVE: Graph Evolution Visualization and Evaluation
+# GrEVE: GRaph Evolution Visualization and Evaluation
