@@ -14,3 +14,4 @@ Per convertire un xtc in dcd:
 pip install mdtraj
 mdconvert -o lysozyme_Protein.dcd  lysozyme_Protein.xtc
 ```
+Work in progress...
