@@ -8,5 +8,9 @@ Per strippare una traiettoria dall'acqua e da eventuali idrogeni:
 gmx trjconv -f md_0_1_noPBC.xtc -s md_0_1.tpr -o lysozyme_Protein.xtc
 ```
 
-Per convertire un xtc in dcd (prima installa mdtraj)
+Per convertire un xtc in dcd:
+
+```
+pip install mdtraj
 mdconvert -o lysozyme_Protein.dcd  lysozyme_Protein.xtc
+```
