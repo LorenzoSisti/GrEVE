@@ -72,7 +72,7 @@ def run_dynetan_pipeline(
 
     # Filtering of intra-residue and isolated contacts
     dnap.filterContacts(
-        notSameRes=True, notConsecutiveRes=False, removeIsolatedNodes=False
+        notSameRes=True, notConsecutiveRes=True, removeIsolatedNodes=True
     )
 
     # Calculation of the Generalized Correlation (GC) in parallel
