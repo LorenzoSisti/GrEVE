@@ -10,11 +10,11 @@ import dynetan
 from dynetan.proctraj import DNAproc
 
 # --- Load the two states trajectory (necessary for delta analyses) -------------------------------------------------
-APO_TOPOLOGY = "/Users/lorenzosisti/hDDC_GrEVE/invisible_data/apo.pdb" 
-APO_TRAJECTORY = "/Users/lorenzosisti/hDDC_GrEVE/invisible_data/apo_nowt.xtc"
+APO_TOPOLOGY = "/Users/lorenzosisti/GrEVE/invisible_data/apo.pdb" 
+APO_TRAJECTORY = "/Users/lorenzosisti/GrEVE/invisible_data/apo_nowt.xtc"
 APO_SEG_IDS = ["A", "B"]  # Segment ID(s) (chain A and chain B)
-HOLO_TOPOLOGY = "/Users/lorenzosisti/hDDC_GrEVE/invisible_data/holo.pdb"
-HOLO_TRAJECTORY = "/Users/lorenzosisti/hDDC_GrEVE/invisible_data/holo_nowt.xtc"
+HOLO_TOPOLOGY = "/Users/lorenzosisti/GrEVE/invisible_data/holo.pdb"
+HOLO_TRAJECTORY = "/Users/lorenzosisti/GrEVE/invisible_data/holo_nowt.xtc"
 HOLO_SEG_IDS = ["A", "B"]
 
 # --- Parameters ---------------------------------------------
@@ -24,7 +24,7 @@ CONTACT_PERSISTENCE = 0.75  # A contact is defined if it is present in at least 
 N_CORES = 7                 # Core number for parallel GC computing
 WEIGHT_EPSILON = 1e-6       # Floor to avoid -log(0)
 
-OUTPUT_DIR = "/Users/lorenzosisti/hDDC_GrEVE/invisible_data/weighted_graphs"
+OUTPUT_DIR = "/Users/lorenzosisti/GrEVE/invisible_data/weighted_graphs"
 
 
 # ----------------------------------------------------------------------
@@ -118,6 +118,11 @@ def process_and_save_networkx(
     nx.set_node_attributes(G, resid_map, "resid")
     nx.set_node_attributes(G, resname_map, "resname")
     nx.set_node_attributes(G, chain_map, "chain")
+
+    # The following line saves a CSV file with node information (node_id, chain, resid, resname, atom_name).
+    # This was necessary as in the original documentation it is not well explained how to select CA over all-atoms.
+    # Thus, I used this .csv file to check whether I was running a CG or all-atom simulation.
+    open(out_dir / f"{label}_nodes.csv", "w").write("node_id,chain,resid,resname,atom_name\n" + "\n".join(f"{i},{getattr(a, 'segid', getattr(a, 'chainID', 'A'))},{a.resid},{a.resname},{a.name}" for i, a in enumerate(dnap.nodesAtmSel)))
 
     # 3. Compute 'GC' and 'weight' = -log(GC) directly on the edges
     for u, v in G.edges():
