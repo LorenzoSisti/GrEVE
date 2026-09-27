@@ -24,60 +24,7 @@ CONTACT_PERSISTENCE = 0.75  # A contact is defined if it is present in at least 
 N_CORES = 7                 # Core number for parallel GC computing
 WEIGHT_EPSILON = 1e-6       # Floor to avoid -log(0)
 
-OUTPUT_DIR = "/Users/lorenzosisti/GrEVE/invisible_data/all_atom_weighted_graphs"
-
-
-# ----------------------------------------------------------------------
-# Define a function to generate the All-Atom node groups (1 node per heavy atom)
-# ----------------------------------------------------------------------
-
-def build_all_atom_groups(dnap: DNAproc, output_txt: str = "node_groups_inspection.txt") -> dict[str, dict[str, set[str]]]:
-    """
-    Genera il dizionario All-Atom normalizzando i nomi degli atomi C-terminali 
-    (OT1/OXT -> O) per non perdere l'atomo O del backbone nei calcoli di rete.
-    Salva un report leggibile in formato .txt per l'ispezione manuale.
-    """
-    u = dnap.getU()
-
-    # 1. Normalizza i nomi degli atomi C-terminali nell'universo MDAnalysis
-    for atom in u.atoms:
-        if atom.name in ("OT1", "O1", "OXT"):
-            atom.name = "O"
-
-    # 2. Mappa i residui per tipologia (resname)
-    res_type_map = {}
-    for res in u.residues:
-        resname = res.resname
-        if resname not in res_type_map:
-            res_type_map[resname] = []
-        res_type_map[resname].append(res)
-
-    # 3. Seleziona gli atomi pesanti standard (escludendo l'atomo terminale extra OT2/O2)
-    node_groups = {}
-    for resname, residues in res_type_map.items():
-        heavy_sets = []
-        for r in residues:
-            heavy_atoms = r.atoms.select_atoms("not element H and not name OT2 O2")
-            heavy_sets.append({a.name for a in heavy_atoms})
-
-        if not heavy_sets:
-            continue
-
-        common_atoms = set.intersection(*heavy_sets)
-        node_groups[resname] = {atom_name: {atom_name} for atom_name in common_atoms}
-
-    # 4. Salva il dizionario formattato in un file .txt per ispezione
-    with open(output_txt, "w") as f:
-        for resname, nodes in sorted(node_groups.items()):
-            f.write(f"=== AMMINOACIDO: {resname} ({len(nodes)} nodi) ===\n")
-            for node_name, atoms in sorted(nodes.items()):
-                atoms_str = ", ".join(sorted(atoms))
-                f.write(f"  • Nodo '{node_name}': atomi = [{atoms_str}]\n")
-            f.write("\n")
-
-    print(f" -> Dizionario dei nodi salvato per ispezione in: {output_txt}")
-
-    return node_groups
+OUTPUT_DIR = "/Users/lorenzosisti/GrEVE/invisible_data/weighted_graphs"
 
 
 # ----------------------------------------------------------------------
@@ -88,7 +35,7 @@ def run_dynetan_pipeline(
     trajectory: str,
     seg_ids: list[str],
     stride: int = 1,
-    cutoff: float = 4.5, # For contact definition between CA to 4.5 Å. For all-atoms simulations it would be 4.5
+    cutoff: float = 4.5, 
     persistence: float = 0.75,
     ncores: int = 4,
 ) -> DNAproc:
@@ -111,9 +58,6 @@ def run_dynetan_pipeline(
     # System loading
     print(f"System loading: {topology}, {trajectory}")
     dnap.loadSystem(topology, trajectory)
-
-    # Decomment the following line if you want to use all-atom representation instead of CA representation
-    dnap.setNodeGroups(build_all_atom_groups(dnap))
 
     # Preparation of the network nodes (1 node per protein residue / C-alpha in this case)
     dnap.prepareNetwork()
@@ -263,7 +207,7 @@ def main() -> None:
     for sys_info in systems:
         process_system(**sys_info)
 
-    print("\nGood job! You completed the single-trajectory pipeline.")
+    print("\nGood job! You completed the single-trajectory pipeline on a coarse-grained (CA) representation.")
 
 
 if __name__ == "__main__":

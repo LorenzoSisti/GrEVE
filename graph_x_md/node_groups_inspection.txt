@@ -1,0 +1,207 @@
+=== AMMINOACIDO: ALA (5 nodi) ===
+  • Nodo 'C': atomi = [C]
+  • Nodo 'CA': atomi = [CA]
+  • Nodo 'CB': atomi = [CB]
+  • Nodo 'N': atomi = [N]
+  • Nodo 'O': atomi = [O]
+
+=== AMMINOACIDO: ARG (11 nodi) ===
+  • Nodo 'C': atomi = [C]
+  • Nodo 'CA': atomi = [CA]
+  • Nodo 'CB': atomi = [CB]
+  • Nodo 'CD': atomi = [CD]
+  • Nodo 'CG': atomi = [CG]
+  • Nodo 'CZ': atomi = [CZ]
+  • Nodo 'N': atomi = [N]
+  • Nodo 'NE': atomi = [NE]
+  • Nodo 'NH1': atomi = [NH1]
+  • Nodo 'NH2': atomi = [NH2]
+  • Nodo 'O': atomi = [O]
+
+=== AMMINOACIDO: ASN (8 nodi) ===
+  • Nodo 'C': atomi = [C]
+  • Nodo 'CA': atomi = [CA]
+  • Nodo 'CB': atomi = [CB]
+  • Nodo 'CG': atomi = [CG]
+  • Nodo 'N': atomi = [N]
+  • Nodo 'ND2': atomi = [ND2]
+  • Nodo 'O': atomi = [O]
+  • Nodo 'OD1': atomi = [OD1]
+
+=== AMMINOACIDO: ASP (8 nodi) ===
+  • Nodo 'C': atomi = [C]
+  • Nodo 'CA': atomi = [CA]
+  • Nodo 'CB': atomi = [CB]
+  • Nodo 'CG': atomi = [CG]
+  • Nodo 'N': atomi = [N]
+  • Nodo 'O': atomi = [O]
+  • Nodo 'OD1': atomi = [OD1]
+  • Nodo 'OD2': atomi = [OD2]
+
+=== AMMINOACIDO: CYS (6 nodi) ===
+  • Nodo 'C': atomi = [C]
+  • Nodo 'CA': atomi = [CA]
+  • Nodo 'CB': atomi = [CB]
+  • Nodo 'N': atomi = [N]
+  • Nodo 'O': atomi = [O]
+  • Nodo 'SG': atomi = [SG]
+
+=== AMMINOACIDO: GLN (9 nodi) ===
+  • Nodo 'C': atomi = [C]
+  • Nodo 'CA': atomi = [CA]
+  • Nodo 'CB': atomi = [CB]
+  • Nodo 'CD': atomi = [CD]
+  • Nodo 'CG': atomi = [CG]
+  • Nodo 'N': atomi = [N]
+  • Nodo 'NE2': atomi = [NE2]
+  • Nodo 'O': atomi = [O]
+  • Nodo 'OE1': atomi = [OE1]
+
+=== AMMINOACIDO: GLU (9 nodi) ===
+  • Nodo 'C': atomi = [C]
+  • Nodo 'CA': atomi = [CA]
+  • Nodo 'CB': atomi = [CB]
+  • Nodo 'CD': atomi = [CD]
+  • Nodo 'CG': atomi = [CG]
+  • Nodo 'N': atomi = [N]
+  • Nodo 'O': atomi = [O]
+  • Nodo 'OE1': atomi = [OE1]
+  • Nodo 'OE2': atomi = [OE2]
+
+=== AMMINOACIDO: GLY (4 nodi) ===
+  • Nodo 'C': atomi = [C]
+  • Nodo 'CA': atomi = [CA]
+  • Nodo 'N': atomi = [N]
+  • Nodo 'O': atomi = [O]
+
+=== AMMINOACIDO: HSD (10 nodi) ===
+  • Nodo 'C': atomi = [C]
+  • Nodo 'CA': atomi = [CA]
+  • Nodo 'CB': atomi = [CB]
+  • Nodo 'CD2': atomi = [CD2]
+  • Nodo 'CE1': atomi = [CE1]
+  • Nodo 'CG': atomi = [CG]
+  • Nodo 'N': atomi = [N]
+  • Nodo 'ND1': atomi = [ND1]
+  • Nodo 'NE2': atomi = [NE2]
+  • Nodo 'O': atomi = [O]
+
+=== AMMINOACIDO: ILE (8 nodi) ===
+  • Nodo 'C': atomi = [C]
+  • Nodo 'CA': atomi = [CA]
+  • Nodo 'CB': atomi = [CB]
+  • Nodo 'CD': atomi = [CD]
+  • Nodo 'CG1': atomi = [CG1]
+  • Nodo 'CG2': atomi = [CG2]
+  • Nodo 'N': atomi = [N]
+  • Nodo 'O': atomi = [O]
+
+=== AMMINOACIDO: LEU (8 nodi) ===
+  • Nodo 'C': atomi = [C]
+  • Nodo 'CA': atomi = [CA]
+  • Nodo 'CB': atomi = [CB]
+  • Nodo 'CD1': atomi = [CD1]
+  • Nodo 'CD2': atomi = [CD2]
+  • Nodo 'CG': atomi = [CG]
+  • Nodo 'N': atomi = [N]
+  • Nodo 'O': atomi = [O]
+
+=== AMMINOACIDO: LYS (9 nodi) ===
+  • Nodo 'C': atomi = [C]
+  • Nodo 'CA': atomi = [CA]
+  • Nodo 'CB': atomi = [CB]
+  • Nodo 'CD': atomi = [CD]
+  • Nodo 'CE': atomi = [CE]
+  • Nodo 'CG': atomi = [CG]
+  • Nodo 'N': atomi = [N]
+  • Nodo 'NZ': atomi = [NZ]
+  • Nodo 'O': atomi = [O]
+
+=== AMMINOACIDO: MET (8 nodi) ===
+  • Nodo 'C': atomi = [C]
+  • Nodo 'CA': atomi = [CA]
+  • Nodo 'CB': atomi = [CB]
+  • Nodo 'CE': atomi = [CE]
+  • Nodo 'CG': atomi = [CG]
+  • Nodo 'N': atomi = [N]
+  • Nodo 'O': atomi = [O]
+  • Nodo 'SD': atomi = [SD]
+
+=== AMMINOACIDO: PHE (11 nodi) ===
+  • Nodo 'C': atomi = [C]
+  • Nodo 'CA': atomi = [CA]
+  • Nodo 'CB': atomi = [CB]
+  • Nodo 'CD1': atomi = [CD1]
+  • Nodo 'CD2': atomi = [CD2]
+  • Nodo 'CE1': atomi = [CE1]
+  • Nodo 'CE2': atomi = [CE2]
+  • Nodo 'CG': atomi = [CG]
+  • Nodo 'CZ': atomi = [CZ]
+  • Nodo 'N': atomi = [N]
+  • Nodo 'O': atomi = [O]
+
+=== AMMINOACIDO: PRO (7 nodi) ===
+  • Nodo 'C': atomi = [C]
+  • Nodo 'CA': atomi = [CA]
+  • Nodo 'CB': atomi = [CB]
+  • Nodo 'CD': atomi = [CD]
+  • Nodo 'CG': atomi = [CG]
+  • Nodo 'N': atomi = [N]
+  • Nodo 'O': atomi = [O]
+
+=== AMMINOACIDO: SER (6 nodi) ===
+  • Nodo 'C': atomi = [C]
+  • Nodo 'CA': atomi = [CA]
+  • Nodo 'CB': atomi = [CB]
+  • Nodo 'N': atomi = [N]
+  • Nodo 'O': atomi = [O]
+  • Nodo 'OG': atomi = [OG]
+
+=== AMMINOACIDO: THR (7 nodi) ===
+  • Nodo 'C': atomi = [C]
+  • Nodo 'CA': atomi = [CA]
+  • Nodo 'CB': atomi = [CB]
+  • Nodo 'CG2': atomi = [CG2]
+  • Nodo 'N': atomi = [N]
+  • Nodo 'O': atomi = [O]
+  • Nodo 'OG1': atomi = [OG1]
+
+=== AMMINOACIDO: TRP (14 nodi) ===
+  • Nodo 'C': atomi = [C]
+  • Nodo 'CA': atomi = [CA]
+  • Nodo 'CB': atomi = [CB]
+  • Nodo 'CD1': atomi = [CD1]
+  • Nodo 'CD2': atomi = [CD2]
+  • Nodo 'CE2': atomi = [CE2]
+  • Nodo 'CE3': atomi = [CE3]
+  • Nodo 'CG': atomi = [CG]
+  • Nodo 'CH2': atomi = [CH2]
+  • Nodo 'CZ2': atomi = [CZ2]
+  • Nodo 'CZ3': atomi = [CZ3]
+  • Nodo 'N': atomi = [N]
+  • Nodo 'NE1': atomi = [NE1]
+  • Nodo 'O': atomi = [O]
+
+=== AMMINOACIDO: TYR (12 nodi) ===
+  • Nodo 'C': atomi = [C]
+  • Nodo 'CA': atomi = [CA]
+  • Nodo 'CB': atomi = [CB]
+  • Nodo 'CD1': atomi = [CD1]
+  • Nodo 'CD2': atomi = [CD2]
+  • Nodo 'CE1': atomi = [CE1]
+  • Nodo 'CE2': atomi = [CE2]
+  • Nodo 'CG': atomi = [CG]
+  • Nodo 'CZ': atomi = [CZ]
+  • Nodo 'N': atomi = [N]
+  • Nodo 'O': atomi = [O]
+  • Nodo 'OH': atomi = [OH]
+
+=== AMMINOACIDO: VAL (7 nodi) ===
+  • Nodo 'C': atomi = [C]
+  • Nodo 'CA': atomi = [CA]
+  • Nodo 'CB': atomi = [CB]
+  • Nodo 'CG1': atomi = [CG1]
+  • Nodo 'CG2': atomi = [CG2]
+  • Nodo 'N': atomi = [N]
+  • Nodo 'O': atomi = [O]
+
